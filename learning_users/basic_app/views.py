@@ -14,6 +14,9 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'basic_app/index.html', context={'on_index':True})
 
+def cats(request):
+    return render(request, 'basic_app/cats.html', context={'on_cats':True})
+
 # The user must be logged in to be able to use this function
 @login_required 
 def user_logout(request):
