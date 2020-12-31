@@ -12,7 +12,7 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
-    return render(request, 'basic_app/index.html')
+    return render(request, 'basic_app/index.html', context={'on_index':True})
 
 # The user must be logged in to be able to use this function
 @login_required 
@@ -54,7 +54,8 @@ def register(request):
     return render(request, 'basic_app/registration.html', 
                   {'user_form': user_form,
                    'profile_form': profile_form,
-                   'registered': registered})
+                   'registered': registered,
+                   'on_register':True})
 
 # Make sure we don't call it login because that is an imported function
 def user_login(request):
@@ -81,4 +82,4 @@ def user_login(request):
                                  "<a href=''>Try again</a>")
 
     else:
-        return render(request, 'basic_app/login.html')
+        return render(request, 'basic_app/login.html', context={'on_login':True})

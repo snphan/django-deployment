@@ -27,10 +27,11 @@ MEDIA_DIR = BASE_DIR.joinpath("media")
 SECRET_KEY = '5q&hf55nxl5r5pq!+pf^4)p+p6#h@0wm-&uig2)$x6g&jd^(-0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "snphan.pythonanywhere.com",
+    "127.0.0.1"
 ]
 
 
